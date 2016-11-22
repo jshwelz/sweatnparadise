@@ -60,8 +60,6 @@
         console.log($scope.user);
         $http.post('/news',$scope.user).success(function(response){
 					$scope.contact = "";
-				//console.log(response);
-      //  refresh();
       });
     };
 
