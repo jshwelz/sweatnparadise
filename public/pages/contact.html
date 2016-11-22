@@ -1,0 +1,37 @@
+<div class="container">
+  <form>
+
+
+    <div class="container">
+      <h3>Contact Us</h3>
+      <p style="font-size:9px;">All the information that is shared with us is completely private.</p>
+      <form>
+        <div class="col-md-6">
+          <div class="form-group">
+          <label>First Name:</label>
+          <input class="form-control" placeholder="John" type="text" name="Fname"  ng-model="contact.Fname">
+          </div>
+
+          <div style="padding-bottom: 10px;">
+            <label>Last Name:</label>
+            <input class="form-control" placeholder="Smith" type="text" name="Lname" ng-model="contact.Lname">
+          </div>
+
+          <div class="form-group">
+            <label>E-mail Address:</label>
+            <input class="form-control" placeholder="example@email.com" type="text" name="email" ng-model="contact.Email">
+          </div>
+          <div class="form-group">
+            <label>Message:</label>
+            <textarea class="form-control" placeholder="Message..." rows="5" ng-model="contact.Message"></textarea>
+          </div>
+          <div class="form-group">
+            <button class="form-control snp-button" ng-click="addContact()">Send</button> 
+          </div>
+
+        </div>
+
+    </div>
+
+  </form>
+</div>

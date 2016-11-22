@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="scotchApp">
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Sweat n' Paradise</title>
+
+		<!---CSS Library-->
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/snp.css" rel="stylesheet">
+		<link href="css/responsive-calendar.css" rel="stylesheet">
+		    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   		 <script src="js/jquery.min.js"></script>
+    		<!-- Include all compiled plugins (below), or include individual files as needed -->
+    		<script src="js/bootstrap.min.js"></script>
+				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+	      <script src="controllers/controllerNav.js"> </script>
+				<script src="controllers/calendarController.js"> </script>
+
+	</head>
+
+	<body ng-controller="mainController">
+		<div class="container-fluid remove-padding">
+
+			<nav class="navbar navbar-default mainMenu" style="margin-bottom:0;">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav pull-right menuStyle">
+			        <li class="active-menuItem edaw"><a href="#">epic</a></li>
+			        <li class="edaw"><a href="#about">about</a></li>
+			        <li class="edaw"><a href="#">Amenities</a></li>
+			        <li class="edaw"><a href="#calendar">Calendar</a></li>
+			        <li class="edaw"><a href="#contact">contact</a></li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+			<div id="brand">
+				<img src="img/brand.png" class="img-responsive" />
+			</div>
+			<div class="clearfix"></div>
+			<div class="menuShadow"></div>
+
+
+<!-- angular views being injected -->
+
+					  <div ng-view></div>
+
+
+
+</div>
+
+				<!-- footer -->
+				<div class="row" style="background-color:#341a0d; padding-bottom:15px;">
+							<div class="container mainFooter">
+							<div class="col-md-4 footer-widget">
+								<h2 class="edaw text-center">News</h2>
+								<ul>
+									<li><a href="#">How to get to Roatan</a></li>
+									<li><a href="#">Is Honduras safe to travel to?</a></li>
+									<li><a href="#">Something to know about the Island</a></li>
+									<li><a href="#">History of Roatan</a></li>
+								</ul>
+
+							</div>
+							<div class="col-md-4 footer-widget">
+								<h2 class="edaw text-center">Newsletter</h2>
+								<p>Stay Tuned with the latest trips</p>
+								<form>
+									<input type="text" name="email" id="email"
+									class="form-control" ng-model="user.email" placeholder="Email">
+									<button class="form-control text-center" data-toggle="tooltip"
+									 title="You have signed up successfully! thanks for subscribing."
+									 ng-click="validateEmail()" style="margin-top:5px;" id="signup">Sign Up</button>
+								</form>
+
+							</div>
+							<div class="col-md-4 footer-widget">
+								<h2 class="edaw text-center">Already Booked?</h2>
+								<p>Already booked and have some questions?</p>
+								<button class="form-control">Talk To My Trainer</button>
+							</div>
+						</div>
+						</div>
+
+
+
+
+
+
+
+	</body>
+</html>
